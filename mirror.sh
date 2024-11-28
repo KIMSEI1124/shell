@@ -19,7 +19,7 @@ SOURCE_LIST="/etc/apt/sources.list"
 cp $SOURCE_LIST $SOURCE_LIST.bak
 
 log 2 $TOTAL_STEPS "🌐 Updating mirror site to ftp.kaist.ac.kr"
-sed -i 's|http://[a-zA-Z0-9.-]*/ubuntu|http://ftp.kaist.ac.kr/ubuntu|g' $SOURCE_LIST
+sudo sed -i 's|http://[a-zA-Z0-9.-]*/ubuntu|http://ftp.kaist.ac.kr/ubuntu|g' $SOURCE_LIST
 
 log 3 $TOTAL_STEPS "🔄 Verifying updated sources list"
 echo "미러 사이트가 ftp.kaist.ac.kr로 변경되었습니다. 다음은 변경된 내용입니다:"
