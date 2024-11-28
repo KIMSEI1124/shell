@@ -1,10 +1,15 @@
 #!/bin/bash
 
+RESET="\033[0m"      
+BOLD="\033[1m"       
+BLUE="\033[34m"      
+GREEN="\033[32m" 
+
 log() {
   local step=$1
   local total_steps=$2
   local message=$3
-  echo "($step/$total_steps) [$(date +"%Y-%m-%d %H:%M:%S")] $message"
+  echo "${BOLD}${BLUE}($step/$total_steps)${RESET} ${BOLD}${GREEN}[$(date +"%Y-%m-%d %H:%M:%S")]${RESET} $message"
 }
 
 # 전체 작업 수 설정
