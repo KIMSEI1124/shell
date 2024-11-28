@@ -16,7 +16,6 @@ TOTAL_STEPS=5
 
 log 1 $TOTAL_STEPS "🗂️  Creating backup of the sources list"
 SOURCE_LIST="/etc/apt/sources.list"
-cp $SOURCE_LIST $SOURCE_LIST.bak
 
 log 2 $TOTAL_STEPS "🌐 Updating mirror site to ftp.kaist.ac.kr"
 sudo sed -i 's|http://[a-zA-Z0-9.-]*/ubuntu|http://ftp.kaist.ac.kr/ubuntu|g' $SOURCE_LIST
